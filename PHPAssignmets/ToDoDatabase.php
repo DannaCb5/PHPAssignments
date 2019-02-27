@@ -39,51 +39,26 @@ try {
 ?>
       <li> <?php echo $value["task"]; ?></li> 
            <form action="ToDoDatabase.php" method="post">
-               <input type="text" value= "<?php echo $value["id"]; ?>" name="id" hidden>
+               <input type="text" value= "<?php echo $value['id']; ?>" name='id' hidden>
                <input type= "submit" value= "Done">
            </form>
 <?php
     }   
-    deleteTask($id, $sql, $conn);
-    $id = $_POST['id'];
-    function deleteTask(a) {
-        if(!empty($_POST['id'])){
-        $id = $_POST['id'];
-        $sql = "DELETE FROM todo WHERE id = $id";
+    $id_input='$_POST["id"]';
+    function delTask($id_input, $conn) {
+        $sql = "DELETE FROM todo WHERE id = $id_input";
         $conn->exec($sql);
-        }
     }
-} catch (PDOException $e) {
-    echo $sql . "<br>" . $e->getMessage();
-}
-$conn = null;
+    if(!empty($id_input)) {
+    delTask($id_input, $conn);
+    }
 ?>
 <?php
-
-/*
- try {
-    
-
-
-    $task = "SELECT task FROM todo";
-    
-    $conn->exec($sql);
-    $conn->exec($task);
-
-    echo "Task added<br>";
-
-
 } catch (PDOException $e) {
-
-    echo $sql . "<br>" . $e->getMessage();
+    echo 'Message: ' .$e->getMessage();
 }
-$conn = null;
-
-*/ ?>
-
-<div>
-
-</div>
+    $conn = null;
+?>
 
 </body>
 </html>
