@@ -2,24 +2,22 @@
 <body>
 
 <!-- ----------------------------------------------------------------- -->
-<!-- Create a Form that has an action "target URL" and a method "How the form is sent" in input for a todo list entry and a submit button -->
+<!-- Create a Form that has an action "target URL" and a method "How the form is sent" and input for a todo list entry and a submit button -->
 
 <form action="ToDoDatabase.php" method="post">
 Task: <input type="text" name="taskName">
 <input type="submit" name=addRecord value="Add">
-</form>
+</form> 
 
 <!-- ----------------------------------------------------------------- -->
-<!-- Declare the global variables used in this file. -->
+<!-- Declare the global variables used in this file.  Connect -->
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "to_do_list";
+
+include globVar.php
 
 //------------------------------------------------------------------------
-// create the function that will be used later to delete a record if the done button is clicked.
+// Create the function that will be used later to delete a record if the done button is clicked.  This must go before the function call but does not run until called later in the program. I placed it at the top just for organizational purposes.
 
 function delTask($id_input, $conn) {
     $sql = "DELETE FROM todo WHERE id = '$id_input'";
@@ -31,14 +29,6 @@ function delTask($id_input, $conn) {
 try {
     $conn = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-//------------------------------------------------------------------------
-// check to see if the done button is pressed (true).  If it is then run the function delTask($id_input, $conn)
-
-    if(isset($_POST["submitPressed"])) {
-        $id_input=(int)$_POST['id'];
-        delTask($id_input, $conn);
-    } 
 
 //------------------------------------------------------------------------
 // Check to see if there is a form entry. If there is then assign the from entry $_POST["taskName"] to the variable $taskName_input, sanitize that variable or remove tags, remove or encode characters. Assign the INSERT INTO string to the variable $sql so that it can be used in multible places. Execute the connection to the which inserts a value $taskName_input as a record into the table todo.  If the form entry
@@ -58,6 +48,13 @@ try {
 // Set the resulting array to associative which are arrays with named keys, fetch those results and assign them to $results
 
     $results = $task->fetchAll(PDO::FETCH_ASSOC);
+//------------------------------------------------------------------------
+// check to see if the done button is pressed (true).  If it is then run the function delTask($id_input, $conn). This if statement was moved above the form to allow the statement to run before the submit button in the form in pressed. The delTask function will wait for input from submit then execute the command.
+
+if(isset($_POST["submitPressed"])) {
+    $id_input=(int)$_POST['id'];
+    delTask($id_input, $conn);
+} 
 
 //------------------------------------------------------------------------
 // Loop the for each result the id value.  You should loop as many times as the amount of records you have.  The loop will create a list of each task value then attach a form with no field to each value to be used as a delete button.
