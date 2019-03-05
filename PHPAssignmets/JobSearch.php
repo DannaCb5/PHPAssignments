@@ -4,8 +4,25 @@
 <!-- ----------------------------------------------------------------- -->
 <!-- Create a Form that has an action "target URL" and a method "How the form is sent" and input for a todo list entry and a submit button -->
 
-<form action="ToDoDatabase.php" method="post">
-Task: <input type="text" name="taskName">
+<style>
+input {
+    display: block;
+}
+</style>
+
+<form action="JobSearch.php" method="post">
+Company Name: <input type="text" name="companyName"><br>
+Company Address: <input type="text" name="companyAddress"><br>
+Hiring Manager's Name: <input type="text" name="companyAddress"><br>
+Hiring Manager's Phone Number: <input type="tel" name="hMPhone"><br>
+Hiring Manager's Email Address: <input type="email" name="hMemail"><br>
+Initial Contact Date: <input type="date" name="contactDate"><br>
+Response:<br><br>
+
+None: <input type="radio" name="response" value="none"> 
+No jobs available: <input type="radio" name="response" value="noJob"> 
+Interviewed: <input type="radio" name="response" value="Interview"> 
+Interviewed and rejected: <input type="radio" name="response" value="Interview"> 
 <input type="submit" name="addRecord" value="Add">
 </form> 
 
@@ -13,7 +30,7 @@ Task: <input type="text" name="taskName">
 <!-- Declare the global variables used in this file.  Connect -->
 
 <?php
-$dbname = "to_do_list";
+$dbname = "jobsearch";
 include "globVar.php";
 
 //------------------------------------------------------------------------
@@ -62,7 +79,7 @@ if(isset($_POST["submitPressed"])) {
     foreach ($results as $key => $value) {
 ?>
       <li> <?php echo $value["task"]; ?></li> 
-           <form action="ToDoDatabase.php" method="post">
+           <form action="JobSearch.php" method="post">
                <input type="text" value= "<?php echo $value['id']; ?>" name='id' hidden>
                <input type= "submit" name="submitPressed" value= "Done">
            </form>
