@@ -1,0 +1,57 @@
+/* HTML{background-color: rgb(4, 20, 26);} */
+/* HTML{background-image: url('background.jpg')} */
+.contactEntry, .title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: -200px;
+}
+.title {
+    position: absolute;
+    z-index: 0;
+}
+.questions {
+    position: relative;
+    z-index: 1;
+}
+.questions {
+    font-size: 1rem;
+    font-family: lobster;
+    justify-content: center;
+    text-align: left;
+    background-color: rgb(46, 145, 245);
+    box-shadow: 0px 0px 40px inset;
+    text-shadow: 2px 2px 10px;
+    border-radius: 10px;
+    padding: 5% 2%;
+    border: 3px solid rgb(48, 19, 5);
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 200px;
+}
+.justify {
+    display: block;
+    width: 300px;
+}
+.entryButton {
+    position: relative;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    align-content: center;
+    /* height: 150px;
+    width: 200px; */
+    background-color: rgb(46, 145, 245);
+    box-shadow: 0px 0px 20px rgb(44, 5, 5) inset;
+    /* box-shadow: 0px 0px 10px rgb(44, 5, 5); */
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    text-shadow: 2px 2px 10px;
+    border-radius: 20px;
+    border: 3px solid rgb(20, 7, 1);
+    width: 200px;
+}
+p {
+    margin: 0px;
+}

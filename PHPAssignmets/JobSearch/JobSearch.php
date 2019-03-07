@@ -1,22 +1,22 @@
 <html>
+    <header>    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Shadows+Into+Light|ZCOOL+KuaiLe" rel="stylesheet">
+    <link rel="stylesheet" href="JobSearch.css"></header>
 <body>
+<main class="boundary">
+    <div>            
+        <img class="background.jpg">
+        <div class="title">
+            <p>Job Search</p>
+        </div>
 
-<!-- ----------------------------------------------------------------- -->
-<!-- Create a Form that has an action "target URL" and a method "How the form is sent" and input for a todo list entry and a submit button -->
-
-<style>
-input {
-    display: block;
-}
-</style>
-
-<form action="JobSearch.php" method="post">
-Company Name: <input type="text" name="companyName"><br>
-Company Address: <input type="text" name="companyAddress"><br>
-Hiring Manager's Name: <input type="text" name="companyAddress"><br>
-Hiring Manager's Phone Number: <input type="tel" name="hMPhone"><br>
-Hiring Manager's Email Address: <input type="email" name="hMemail"><br>
-Initial Contact Date: <input type="date" name="contactDate"><br>
+    <form class="questions" action="JobSearch.php" method="post">
+Company Name: <input class="justify" type="text" name="companyName"><br>
+Company Address: <input class="justify" type="text" name="companyAddress"><br>
+Hiring Manager's Name: <input class="justify" type="text" name="companyAddress"><br>
+Hiring Manager's Phone Number: <input class="justify" type="tel" name="hMPhone"><br>
+Hiring Manager's Email Address: <input class="justify" type="email" name="hMemail"><br>
+Initial Contact Date: <input class="justify" type="date" name="contactDate"><br>
 Response:<br><br>
 
 None: <input type="radio" name="response" value="none"> 
@@ -24,7 +24,11 @@ No jobs available: <input type="radio" name="response" value="noJob">
 Interviewed: <input type="radio" name="response" value="Interview"> 
 Interviewed and rejected: <input type="radio" name="response" value="Interview"> 
 <input type="submit" name="addRecord" value="Add">
-</form> 
+</form>
+
+    </div>
+</main>
+> 
 
 <!-- ----------------------------------------------------------------- -->
 <!-- Declare the global variables used in this file.  Connect -->
