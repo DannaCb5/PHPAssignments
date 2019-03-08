@@ -1,6 +1,7 @@
 /* HTML{background-color: rgb(4, 20, 26);} */
 /* HTML{background-image: url('background.jpg')} */
 .contactEntry {
+
     position: absolute;
     width: 675px;
     height: 800px;
@@ -9,11 +10,31 @@
 }
 /* was margin-top: 0px; */
 .title {
+    background-color: rgb(46, 245, 122);
     position: absolute;
     z-index: 0;
     width: 70%;
     height: 20%;
-    margin-top: 268px;
+    margin-top: 400px;
+    margin-left: 70%;
+}
+.display {
+    font-size: 1.2rem;
+    font-family: lobster;
+    position: absolute;
+    z-index: 3;
+    background-color: rgb(245, 46, 179);
+    height: 20px;
+    width: 100%;
+    margin: 0px;
+}
+.background {
+    opacity: 0.5;
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    height: 20%;
+    margin-top: 400px;
     margin-left: 70%;
 }
 .questions {
@@ -34,16 +55,18 @@
     border: 3px solid rgb(48, 19, 5);
     margin-right: 150px;
     margin-left: 150px;
-    margin-top: 266px;
+    margin-top: 400px;
 }
 .justify {
     display: block;
     width: 300px;
 }
 .radioButtons {
+
     font-size: .8rem;
 }
 .entryButton {
+
     position: relative;
     font-size: 1rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -62,6 +85,4 @@
     border: 3px solid rgb(20, 7, 1);
     width: 200px;
 }
-p {
-    margin: 0px;
-}
+

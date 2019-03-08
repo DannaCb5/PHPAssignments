@@ -4,10 +4,11 @@
     <link rel="stylesheet" href="JobSearch.css"></header>
 <body>
 <main class="contactEntry">
+
     <div>            
-        <img class="title" src="background.jpg">
-        <div>
-            <p>Job Search</p>
+    <img class="background" src="background.jpg">
+        <div class="title">
+            <p class=>Job Search</p>
         </div>
 
     <form class="questions" action="JobSearch.php" method="post">
@@ -25,11 +26,8 @@ Interviewed: <input type="radio" name="response" value="Interview">
 Rejection Letter: <input type="radio" name="response" value="Interview"> 
 Offered Job: <input type="radio" name="response" value="employed"> 
 <input type="submit" name="addRecord" value="Add">
-</div>
 </form>
 
-    </div>
-</main>
 > 
 
 <!-- form validation did not finish -->
@@ -66,7 +64,6 @@ function test_input($data) {
 }
 ?>
 
-
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
@@ -77,13 +74,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $companyName = test_input($_POST["companyName"]);
   }
-
   if (empty($_POST["hMName"])) {
     $hMNameErr = "The Hiring Manager's name is required";
   } else {
     $hMName = test_input($_POST["hMName"]);
   }
-
   if (empty($_POST["hMPhone"])) {
     $hMPhoneErr = "The Hiring Manager's phone number is required";
   } else {
@@ -118,22 +113,24 @@ echo $contactDate;
 echo "<br>";
 echo $response;
 ?>
-</body>
-</html>
+
 <!-- ----------------------------------------------------------------- -->
 <!-- Declare the global variables used in this file.  Connect -->
 
 <?php
 $dbname = "jobsearch";
 include "globVar.php";
+$contact = 'contact';
+$tableCN = 'Company_Name';
+$tableCA = 'Company_Address';
+$tableHMN = 'Hiring_Manager_Name';
+$tableHMP = 'Hiring_Manager_Number';
+$tableHME = 'Hiring_Manager_Email';
+$tableICD = 'Initial_Contact_Date';
+$tableRes = 'Response';
 
-//------------------------------------------------------------------------
-// Create the function that will be used later to delete a record if the done button is clicked.  This must go before the function call but does not run until called later in the program. I placed it at the top just for organizational purposes.
 
-function delTask($id_input, $conn) {
-    $sql = "DELETE FROM todo WHERE id = '$id_input'";
-    $conn->exec($sql);
-}
+
 //------------------------------------------------------------------------
 // Add a try/catch Exception Handler to catch a specified change to the normal flow, save the code state and send an error message to the page. 
 
@@ -147,19 +144,28 @@ try {
     if(!empty($_POST["companyName"]) && isset($_POST["addRecord"])) { 
         $companyName_input = $_POST["companyName"];
         $filtered_CName = (filter_var($companyName_input, FILTER_SANITIZE_STRING));
-        $sql = "INSERT INTO contact ("Company Name", "Company Address", "Hiring Manager Name", "Hiring Manager Number", "Hiring Manager Email", "Initial Contact Date", "Response") VALUES ('$companyName', '$companyAddress', '$hMName', '$hMPhone', '$hMemail', '$contactDate', '$response')";
+        $sql = "INSERT INTO $contact ($tableCN, $tableCA, $tableHMN, $tableHMP, $tableHME, $tableICD, $tableRes) VALUES ('$companyName', '$companyAddress', '$hMName', '$hMPhone', '$hMEmail', '$contactDate', '$response' )";
         $conn->exec($sql);
     } else {
     echo "Please enter contact information and click the add button.";
     }
-    $jobSearch = $conn->prepare("SELECT * FROM jobsearch"); 
+    $jobSearch = $conn->prepare("SELECT * FROM ($contact)"); 
     $jobSearch->execute();
+  
 
 //------------------------------------------------------------------------
 // Set the resulting array to associative which are arrays with named keys, fetch those results and assign them to $printOut
 
     $printOut = $jobSearch->fetchAll(PDO::FETCH_ASSOC);
+
 //------------------------------------------------------------------------
+function display($printOut){
+  $string1="<p class='display'><pre>";
+  $string2="hello</p></pre>";
+  echo $string1;
+   var_dump ($printOut);
+  echo $string2;
+  };
 
 
 //------------------------------------------------------------------------
@@ -169,10 +175,14 @@ try {
     echo 'Message: ' .$e->getMessage();
 }
 
+
 //------------------------------------------------------------------------
 // Close the connection
     $conn = null;
 ?>
 <!-- ----------------------------------------------------------------- -->
+</div>
+<?php display($printOut); ?>
+</main>
 </body>
 </html>
