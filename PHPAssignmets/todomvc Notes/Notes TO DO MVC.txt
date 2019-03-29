@@ -1,0 +1,103 @@
+hint: app, $on
+
+iffy function with no name which runs on execution.
+app.js
+1. Store?
+2. Model - Gets information from store
+3. Template - 
+4. View - Gets information from template
+5. Controller - Gets information from model and view
+npm run text
+   |       |
+server     |_____ cy:run____
+ |   |________              |
+ |            |             |
+ gulp     test-server      Cypress
+
+node.js
+   npm/yarn/bower - package manager
+      node - modules
+      package.json
+      dependencies
+      dev-dependencies
+      jshint - linter - eslint
+      gulp/grunt/brunch/broccoli - task runner - pacage
+      grunt - task runner
+      Cypress - Testing framework
+      sass - simple scripting language - interpreter
+      underscore.js
+      lodash
+      jquery - used for eventlistner in our program
+
+constructor - when you instantiate a new object off of a function.
+
+css - frameworks:
+   - bootstrap
+   - materialize
+   - foundation
+   - skeleton
+
+The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window. ... A global variable, window , representing the window in which the script is running, is exposed to
+
+helpers.js:  jQuery
+let dogScope = window.qs('.cat');
+letdog1 = document.querySelector(".dog");
+letdog2 = window.qs('.dog', cat);
+
+store.js:
+
+localstorage collection - nosql version of a database. stored in the browser. ex. .getitem returns a key value from localstorage, .setitem adds a key value to localstorage
+MongoDB is similar in the fact that they are nosql database.  Other things are different.
+
+JSON.strinify - turns object into string, JSON.parse - turns a string into an object.
+
+Cookies, localserver are stored in the browser.
+Sessions, mysql are stored on the server. 
+
+Prototypical inheritance.
+   Prototype
+
+let kroger = new store
+let publix = new store
+let sprint = new store
+
+if you put prototype between store and find then the instantiations will inherit the properties of store.
+store.prototype.find
+kroger.find
+publix.find
+sprint.find
+
+A constructor is a function that runs each time there is an instantion of the function.
+callback - function that is executed after another function has function.
+higher order function - function that takes a function.
+
+loops
+- for
+- while
+- do while
+- for each
+- for in
+
+functions
+- call
+- apply
+- bind
+
+global nodelist - all of the dom elements
+
+helpers.js
+
+@param - parameter is an argument.
+
+Xhr = AJAX
+
+github workshopper/javascripting
+Javascript Seacher on Twitter
+https://github.com/getify/You-Dont-Know-JS
+https://docs.google.com/document/u/1/?ftv=1
+web development bootcamp at the clubhouse
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+https://medium.freecodecamp.org/
+
+
+go to khanacademy.org for training
