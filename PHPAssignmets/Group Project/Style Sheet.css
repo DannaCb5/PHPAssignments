@@ -1,0 +1,267 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Roboto', sans-serif;
+  }
+  
+  h1 {
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 36px;
+  }
+  
+  h3 {
+    font-size: 30px;
+  }
+  
+  h4 {
+    font-size: 26px;
+  }
+  
+  h5 {
+    font-size: 24px;
+  }
+  
+  h6 {
+    font-size: 18px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  div {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100px;
+    vertical-align: top;
+    border-radius: 20px;
+    height: 40px;
+    margin: 10px 5px;
+  }
+  
+  section {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #f3f2f2;
+  }
+  
+  .header {
+    border-bottom: 1px solid #f3f2f2;
+    border-radius: 0;
+    margin: 10px 5px;
+    display: inline-block;
+  }
+  .header p {
+    text-align: center;
+    width: 100%;
+    color: #333333;
+  }
+  
+  .clear {
+    display: block;
+    height: 0;
+    margin: 0;
+  }
+  .font1 {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font2 {
+    font-family: 'Cinzel', serif;
+    text-shadow: .8px .8px 1px black;  
+  }
+
+  .font3 {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .font4 {
+    font-family: 'Roboto', sans-serif;
+    text-shadow: .8px .8px 1px black;  
+  }
+
+  .font5 {
+    font-family: 'Srisakdi', cursive;
+  }
+
+  .font6 {
+    font-family: 'Srisakdi', cursive;
+    text-shadow: .8px .8px 1px black;  
+  }
+  .font7 {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .font8 {
+    font-family: 'Dancing Script', cursive;
+    text-shadow: .8px .8px 1px black;    
+  }
+ .font9 {
+    font-family: 'Noto Serif', serif;
+  }
+
+  .font10 {
+    font-family: 'Noto Serif', serif;
+    text-shadow: .8px .8px 1px black;    
+  }
+  
+  .blue1 {
+    background-color: #30dddd;
+  }
+  .blue2 {
+    background-color: #2895b1;
+  }
+  
+  .blue3 {
+    background-color: #1c72c4;
+  }
+  
+  .blue4 {
+    background-color: #4438e6;
+  }
+  
+  .blue5 {
+    background-color: #1333c4;
+  }
+  
+  .blue6 {
+    background-color: #2a1968;
+  }
+  
+  .blue7 {
+    background-color: #110a75;
+  }
+
+  .blue8 {
+    background-color: #0f0a57;
+  }
+  .blue9 {
+    background-color: #110d35;
+  }
+  
+  .red1 {
+    background-color: #f1a6a6;
+  }
+  
+  .red2 {
+    background-color: #e04d4d;
+  }
+  
+  .red3 {
+    background-color: #fd0202;
+  }
+
+  .red4 {
+    background-color: #b32020;
+  }
+  .red5 {
+    background-color: #cf0f39;
+  }
+  .red6 {
+    background-color: #a5082a;
+  }
+  .red7 {
+    background-color: #850707;
+  }
+  .red8 {
+    background-color: #5c0505;
+  }
+  .red9 {
+    background-color: #420404;
+  }
+  
+  .yellow1 {
+    background-color: #ce650f;
+  }
+  
+  .yellow2 {
+    background-color: #d4960e;
+  }
+  
+  .yellow3 {
+    background-color: #f1ee0f;
+  }
+
+  .yellow4 {
+    background-color: #d6c316;
+  }
+  
+  .yellow5 {
+    background-color: #93a819;
+  }
+  
+  .yellow6 {
+    background-color: #a0971e;
+  }
+  
+  .yellow7 {
+    background-color: #49b115;
+  }
+
+  .yellow8 {
+    background-color: #286e16;
+  }
+  
+  .yellow9 {
+    background-color: #06380a;
+  }
+  
+
+
+
+  
+  
+  .shadow-container {
+    display: block;
+    background-color: #fdfcfc;
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+  
+  .shadow {
+    position: relative;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  .shadow1 {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .shadow3 {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .shadow5 {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  }
+  
+  .background-pattern1 {
+    background-color: azure;
+    background-image: url("1.jpg");
+}
+.background-pattern2 {
+  background-color: azure;
+  background-image: url("2.jpg");
+}
+.background-pattern3 {
+  background-color: azure;
+  background-image: url("3.jpg");
+}
+.background-pattern4 {
+  background-color: azure;
+  background-image: url("4.jpg");
+}
+.background-pattern5 {
+  background-color: azure;
+  background-image: url("6.jpg");
+}
+.background-pattern6 {
+  background-color: azure;
+  background-image: url("7.jpg");
+}
