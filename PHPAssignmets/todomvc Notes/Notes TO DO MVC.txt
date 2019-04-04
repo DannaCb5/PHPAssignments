@@ -1,7 +1,8 @@
-hint: app, $on
 
-iffy function with no name which runs on execution.
+#TO DO MVC NOTES
+
 app.js
+	iffy function with no name which runs on execution.
 1. Store - Database Management - Global key: value pairs. I/O [{}, {}]
 2. Model - Gets information from store. Abstracted API for DB. CRUD. 
          Create: adds a title and saves record.
