@@ -2,10 +2,46 @@ hint: app, $on
 
 iffy function with no name which runs on execution.
 app.js
-1. Store?
-2. Model - Gets information from store
-3. Template - 
-4. View - Gets information from template
+1. Store - Database Management - Global key: value pairs. I/O [{}, {}]
+2. Model - Gets information from store. Abstracted API for DB. CRUD. 
+         Create: adds a title and saves record.
+         Read: Robust store find - Poly morphism
+         Update: Reorder
+         Drop: Delete
+         
+3. Template - To convert data object to HTML {}=></>
+4. View - Gets information from template.  Add event
+	function View(template) {
+		this.template = template;
+
+		this.ENTER_KEY = 13;  //these keycodes can be found at https://keycode.info 
+		this.ESCAPE_KEY = 27;
+
+      qs('[data-id="' + id + '"]') - query by attribute instead of id, tag..
+
+      $delete(element.method, target, type, handler)
+	
+      else if (event === 'itemToggle') {
+			$delegate(self.$todoList, '.toggle', 'click', function () {
+				handler({
+					id: self._itemId(this),
+					completed: this.checked
+				});
+			});
+      Described as:
+      calling the function $delegate adding the type which is event listener 'click' and add it to the element.method self.$todoList with the target 'toggle', then we run and anonamous function.  In that function we call a function named handler, passing an object with the property id with a key: value of id: self._itemId() pair passing argument (this), our next property with the key: value pair.
+      
+      $delege(self.$todoList, 'li .edit', 'blur', function () {})
+      Event delegation
+        |              |              |
+      CHILD          CHILD          CHILD
+      
+      Document.queryselector("Parent").addEventlistener("blur") function (event) { event target} - when you use parent for the qs then you only do this once.  If it were child it would be 3 times.
+      
+      
+      
+
+
 5. Controller - Gets information from model and view
 npm run text
    |       |
@@ -30,6 +66,7 @@ node.js
       jquery - used for eventlistner in our program
 
 constructor - when you instantiate a new object off of a function.
+   Clues you have a constructor function are: Name is capitalised.  A lot of binding of this.
 
 css - frameworks:
    - bootstrap
@@ -83,6 +120,10 @@ functions
 - apply
 - bind
 
+defining an object: defining property of javascript.
+var objName = {key1: value, key2: value}
+another name for key is property, indexes, positions.
+
 global nodelist - all of the dom elements
 
 helpers.js
@@ -101,3 +142,5 @@ https://medium.freecodecamp.org/
 
 
 go to khanacademy.org for training
+learncodefrom.us for teaching resources
+typescript and coffeescript are libraries that force you to show you datatypes.
