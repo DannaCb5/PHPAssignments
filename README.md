@@ -39,11 +39,11 @@ calling the function $delegate adding the type which is event listener 'click' a
 
 ```$delegate(self.$todoList, 'li .edit', 'blur', function () {})```
 
-Event delegation:
+Event delegation:<br/>
 
-|              |              |
+|              |              |<br/>
 
-CHILD          CHILD          CHILD
+CHILD          CHILD          CHILD<br/>
 
 Document.queryselector("Parent").addEventlistener("blur") function (event) { event target} - when you use parent `<addr>` for the qs then you only do this once.  If it were child it would be 3 times.
 
@@ -108,18 +108,19 @@ kroger.find
 publix.find
 sprint.find
 
-A constructor is a function that runs each time there is an instantion of the function.
+**constructor**
+is a function that runs each time there is an instantion of the function.
 callback - function that is executed after another function has function.
 higher order function - function that takes a function.
 
-loops
+**loops**
 - for
 - while
 - do while
 - for each
 - for in
 
-functions
+**functions**
 - call
 - apply
 - bind
